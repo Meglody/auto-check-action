@@ -27,7 +27,7 @@ const check = async (name: string, url: string) => {
 
   const currentDateTime = `${now.getFullYear()}-${
     now.getMonth() + 1
-  }-${now.getDate()} ${now.getHours()}:${now
+  }-${now.getDate()} ${(now.getUTCHours() + 8) % 24}:${now
     .getMinutes()
     .toString()
     .padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`
